@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro clientes</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <section class="full-banner-form">
+        <div class="container-login">
+            <form class="form-login" method="post">
+                <h1>Formulário de Cadastro</h1>
+                <label for="nome">
+                    Nome*:
+                    <input required type="text" name="nome" id="nome" placeholder="Digite seu nome"
+                    oninvalid="this.setCustomValidity('Preencha o campo CPF')" oninput="this.setCustomValidity('')"/>
+                </label>
+                <label for="email">
+                    Email*:
+                    <input required type="text" name="email" id="email" placeholder="Digite seu email" 
+                    oninvalid="this.setCustomValidity('Preencha o campo email')" oninput="this.setCustomValidity('')"/>
+                </label>
+                <label for="password">
+                    Senha*:
+                    <input required type="password" name="password" id="password" placeholder="Coloque sua senha"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="A senha deve conter ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres."/>
+                </label>
+                <label for="password">
+                    Confirme a Senha*:
+                    <input required type="password" name="password" id="confirm_password" placeholder="Repita sua senha"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="A senha deve conter ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres."/>
+                </label>
+                <button type="submit" id="submit">Continuar</button>
+            </form>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+</html>
